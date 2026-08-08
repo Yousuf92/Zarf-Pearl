@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Zarf Pearl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">✦</span>
+      <span class="brand-word">Zarf <span>Pearl</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Collection</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="cart-link" href="cart.html">Cart <span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:40px;">
+      <span class="eyebrow">Step 2 of 2</span>
+      <h2>Checkout</h2>
+    </div>
+
+    <div id="checkout-form-panel">
+      <div class="checkout-layout">
+        <form class="checkout-card" id="checkout-form">
+          <h3>Shipping Details</h3>
+          <div class="form-row">
+            <div class="field-light">
+              <label for="fullname">Full Name</label>
+              <input id="fullname" name="fullname" type="text" required>
+            </div>
+            <div class="field-light">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="01XXXXXXXXX" required>
+            </div>
+          </div>
+          <div class="field-light">
+            <label for="address">Delivery Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+          </div>
+          <div class="form-row">
+            <div class="field-light">
+              <label for="city">City</label>
+              <input id="city" name="city" type="text" placeholder="e.g. Dhaka" required>
+            </div>
+            <div class="field-light">
+              <label for="postcode">Postcode</label>
+              <input id="postcode" name="postcode" type="text">
+            </div>
+          </div>
+
+          <h3 style="margin-top:26px;">Payment Method</h3>
+          <div class="pay-options">
+            <label class="pay-option">
+              <input type="radio" name="payment" value="bkash">
+              <span class="pay-badge bkash">bKash</span>
+              <span>
+                <span class="pay-label" style="display:block;">bKash</span>
+                <span class="pay-sub">Pay via bKash mobile wallet</span>
+              </span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="payment" value="nagad">
+              <span class="pay-badge nagad">Nagad</span>
+              <span>
+                <span class="pay-label" style="display:block;">Nagad</span>
+                <span class="pay-sub">Pay via Nagad mobile wallet</span>
+              </span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="payment" value="card">
+              <span class="pay-badge card">CARD</span>
+              <span>
+                <span class="pay-label" style="display:block;">Debit / Credit Card</span>
+                <span class="pay-sub">Visa, Mastercard, and local cards</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="order-note">
+            Payment is confirmed after this step is connected to a live payment gateway. For now, placing an order reserves your items and we'll contact you by phone to confirm payment.
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:22px;">Place Order</button>
+        </form>
+
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          <div class="summary-row"><span>Subtotal</span><span id="co-subtotal">৳0</span></div>
+          <div class="summary-row"><span>Shipping</span><span id="co-shipping">Free</span></div>
+          <div class="summary-row total"><span>Total</span><span class="val" id="co-total">৳0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="confirm-panel" id="confirm-panel" style="display:none;">
+      <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="35" cy="35" r="33" fill="none" stroke="#0B3D2E" stroke-width="2"/>
+        <path d="M20 36l10 10 20-22" fill="none" stroke="#B8935A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h2>Order Received</h2>
+      <p style="color:rgba(34,31,27,0.65);">We'll confirm your <span id="confirm-method"></span> payment and delivery by phone shortly.</p>
+      <div class="confirm-id">Order #<span id="confirm-order-id"></span></div>
+      <p style="color:rgba(34,31,27,0.65);">Total: <strong id="confirm-total"></strong></p>
+      <a href="shop.html" class="btn btn-outline" style="margin-top:18px;">Continue Shopping</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Zarf Pearl. All rights reserved.</span>
+    <span>Sea &amp; cultivated pearls, imported from Japan &amp; China.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
