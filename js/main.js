@@ -81,7 +81,7 @@ function updateCartBadge(){
 function pearlSVG(tone, size=120){
   const [light, deep] = tone;
   const gid = "g" + Math.random().toString(36).slice(2,9);
-  return `<svg viewBox="0 0 120 120" width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pearl illustration">
+  return `<svg viewBox="0 0 120 120" width="${size}" height="${size}" xmlns="https://www.w3.org/2000/svg" role="img" aria-label="Pearl illustration">
     <defs>
       <radialGradient id="${gid}" cx="38%" cy="32%" r="70%">
         <stop offset="0%" stop-color="${light}"/>
@@ -114,12 +114,12 @@ function strandSVG(count=15){
     out += `<circle cx="${x}" cy="14" r="${rs}" fill="#F6F2EA" stroke="#B8935A" stroke-width="1"/>`;
     x += rs;
   });
-  return `<svg viewBox="0 0 640 28" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${out}</svg>`;
+  return `<svg viewBox="0 0 640 28" xmlns="https://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${out}</svg>`;
 }
 
 /* ---------- SVG: geometric arabesque hero pattern ---------- */
 function arabesquePatternSVG(){
-  return `<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  return `<svg width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
       <pattern id="starLattice" width="80" height="80" patternUnits="userSpaceOnUse">
         <g fill="none" stroke="#B8935A" stroke-width="1">
@@ -134,7 +134,7 @@ function arabesquePatternSVG(){
 
 /* ---------- SVG: brand emblem for story section ---------- */
 function brandEmblemSVG(){
-  return `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  return `<svg viewBox="0 0 200 200" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="100" cy="100" r="92" fill="none" stroke="#B8935A" stroke-width="1.5"/>
     <circle cx="100" cy="100" r="78" fill="none" stroke="#B8935A" stroke-width="1" opacity="0.6"/>
     <g fill="none" stroke="#D8B98A" stroke-width="1.2">
@@ -147,7 +147,7 @@ function brandEmblemSVG(){
 
 /* ---------- Empty cart icon ---------- */
 function emptyCartSVG(){
-  return `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  return `<svg viewBox="0 0 64 64" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="32" cy="32" r="30" fill="none" stroke="#0B3D2E" stroke-width="1.5"/>
     <path d="M20 24h24l-3 18H23z" fill="none" stroke="#0B3D2E" stroke-width="1.5"/>
     <circle cx="25" cy="46" r="2.5" fill="#0B3D2E"/>
